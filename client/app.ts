@@ -1,7 +1,6 @@
 import 'zone.js/dist/zone';
 import 'reflect-metadata';
 import {Component, provide} from 'angular2/core';
-// import {bootstrap} from 'angular2/platform/browser';
 import {bootstrap} from 'angular2-meteor-auto-bootstrap';
 import {MeteorComponent} from 'angular2-meteor';
 import {HTTP_PROVIDERS} from 'angular2/http';
