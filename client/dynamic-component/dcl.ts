@@ -1,16 +1,15 @@
-import 'reflect-metadata';
 import {Component, DynamicComponentLoader, Injector, ViewContainerRef} from 'angular2/core';
 
 @Component({
     selector: 'child-component',
-    template: '<h5>dcl.loadAsRoot(ChildComponent, #child, injector);</h5>'
+    template: '<h5>Child</h5>'
 })
 class ChildComponent {
 }
 
 @Component({
     selector: 'child-component2',
-    template: '<h4>dcl.loadNextToLocation(ChildComponent2, viewContainerRef);</h4>'
+    template: '<h4>Child Child</h4>'
 })
 class ChildComponent2 {
 }
@@ -20,7 +19,7 @@ class ChildComponent2 {
     template: 'Parent (<child id="child"></child>)'
 })
 
-export class DynamicLoaderComponent {
+class DynamicLoaderComponent {
     constructor(dcl: DynamicComponentLoader, injector: Injector, viewContainerRef: ViewContainerRef) {
         dcl.loadAsRoot(ChildComponent, '#child', injector);
         dcl.loadNextToLocation(ChildComponent2, viewContainerRef);

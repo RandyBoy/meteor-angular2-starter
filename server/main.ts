@@ -1,4 +1,6 @@
-import {Meteor} from 'meteor/meteor';
-Meteor.startup(() => {
-    // code to run on server at startup
-});
+import {loadParties} from './load-parties';
+import './parties';
+
+Meteor.startup(loadParties);
+
+
