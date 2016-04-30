@@ -9,7 +9,7 @@ import {InjectUser} from 'angular2-meteor-accounts-ui';
     templateUrl: 'client/parties-form/parties-form.html'
 })
 
-@InjectUser()
+//@InjectUser()
 export class PartiesForm {
     partiesForm: ControlGroup;
 

@@ -3,16 +3,17 @@ import {Mongo} from 'meteor/mongo';
 export var Parties = new Mongo.Collection<Party>('parties');
 
 Parties.allow({
-  insert: function() {
+  insert: function () {
     var user = Meteor.user();
     return !!user;
   },
-  update: function() {
+  update: function () {
     var user = Meteor.user();
     return !!user;
   },
-  remove: function() {
+  remove: function () {
     var user = Meteor.user();
     return !!user;
   }
 });
+
